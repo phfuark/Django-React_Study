@@ -1,1 +1,1 @@
-# Django-Reat_Study
+# Django-React_Study

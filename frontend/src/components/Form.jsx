@@ -17,7 +17,8 @@ function Form({route, method}){
         e.preventDefault();
 
         try{
-            const res = await api.post("/api/token/", { username, password })
+            console.log(method, route);
+            const res = await api.post(route, { username, password })
             if (method === 'login'){
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh)
